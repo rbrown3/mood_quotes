@@ -6,7 +6,7 @@ ActiveRecord::Base.logger = nil
 
  def music
    player = Audite.new
-   player.load('./lib/Ambient-background-music-floating.mp3')
+   player.load('./lib/openingsong.mp3')
    player.start_stream
  end
 
@@ -29,16 +29,22 @@ def start_program
   clear_screen
 
   @name = $prompt.ask('What is your name?')
+
+   # check_name = User.all.include? (@name)
+   #  if check_name == true
+   #  puts "Sorry, name is taken."
+   #  @name = $prompt.ask('What is your name?')
+
+  #end
 #   do |q|
 #   question.validate(/\A\w+@\w+\.\w+\Z/)
 #   question.messages[:required?] = 'Name required'
 # end #, default: ENV['USER'])
-  while @name == nil
-    @name = $prompt.ask('What is your name?')
-  end
   password = $prompt.mask("What is your password?")
 
   @current_user = User.find_or_create_by(name: @name)
+
+
   feeling_question
 end
 
@@ -82,8 +88,7 @@ def options
     menu.choice "change username" => -> do change_username end
     menu.choice "Delete my account" => -> do delete_user end
     menu.choice "exit" => -> do exit_app end
-
-end
+    end
 end
 
 def exit_app
@@ -97,6 +102,8 @@ def print_quotes(user)
     puts "#{i+1}. #{quote}\n"
     puts "\n"
   end
+    sleep(7)
+    clear_screen
   options
 end
 
@@ -118,11 +125,13 @@ def all_anxious_days(user)
 end
 
 def mood_tracker(user)
+  clear_screen
   my_moods = []
   my_moods << user.happy_days
   my_moods << user.sad_days
   my_moods << user.anxious_days
   my_moods
+  options
 end
 
 #def total_moments
@@ -159,13 +168,14 @@ def happy
   end
 
 
+
   number_happy_quotes = happy_quotes.size
   selected_happy_quote = happy_quotes[rand(1..number_happy_quotes)]
-  puts "#{selected_happy_quote.content}, by author: #{selected_happy_quote.author}"
+  puts "#{selected_happy_quote.content} author: #{selected_happy_quote.author}"
   UserQuote.create(user_id: @current_user.id, quote_id: selected_happy_quote.id)
   puts "                                                             "
-  sleep(4)
-
+  sleep(7)
+  clear_screen
   options
 
   # $prompt.select("What do you want to do now?") do |menu|
@@ -181,10 +191,10 @@ def sad
 
   number_sad_quotes = sad_quotes.size
   selected_sad_quote = sad_quotes[rand(1..number_sad_quotes)]
-  puts "#{selected_sad_quote.content}, by author: #{selected_sad_quote.author}"
+  puts "#{selected_sad_quote.content} author: #{selected_sad_quote.author}"
   UserQuote.create(user_id: @current_user.id, quote_id: selected_sad_quote.id)
-  sleep(4)
-
+  sleep(7)
+  clear_screen
   options
 
   # $prompt.select("What do you want to do now?") do |menu|
@@ -205,18 +215,20 @@ def anxious
   number_anxious_quotes = anxious_quotes.size
   selected_anxious_quote = anxious_quotes[rand(1..number_anxious_quotes)]
 
-  puts "#{selected_anxious_quote.content}, by author: #{selected_anxious_quote.author}"
+  puts "#{selected_anxious_quote.content} author: #{selected_anxious_quote.author}"
   UserQuote.create(user_id: @current_user.id, quote_id: selected_anxious_quote.id)
-  sleep(1)
-
+  sleep(7)
+  clear_screen
   options
   end
 
   def resources
+    clear_screen
     puts "If you are in an emotionally or physically abusive relationship, remember it isn't your fault and you deserve the help that you need. Safe Horizon Hotline : 800-621-HOPE (4673)\u{1f496}"
     puts "We can all prevent suicide. If you or someone you know is in crisis, call The National Suicide Prevention Hotline: 1-800-273-8255. You are not alone \u{1f496}. "
     puts "Service for LGBT and questioning people. Call the LGBT National Help Center: 1-888-843-4564 \u{1f496} ."
-  end
+    options
+   end
   # def run
   # @current_user = start_program
   # options

@@ -27,38 +27,30 @@ Your **minimum requirements** for this project are to build a Command Line App t
 
 ## Project Overview (Timeline)
 
-### Phase 1: The Setup
+Welcome to the Mood Quotes app! Sometimes we all need some inspiration to keep us going. Regardless of your current situation, things don't stay the same forever. We live in a world that has more than enough opportunities for redemption, growth and change.
 
-This should take approximately **half a day**.
+## How to install this app:
 
-Do not begin coding until you have your pitch approved by an instructor. Do not overthink this. Do not spend your whole day whiteboarding out a schema.
-
-#### Planning
-
-Your **first goal** should be to decide on your models and determine the relationships between them. You **must have a minimum of three models consisting of at least _one_ many-to-many relationship.** Here are some ideas:
-
-* `Restaurant`, `User`, `Review`: (Yelp domain) A restaurant has many users and an user has many restaurants; reviews belongs to restaurant and to user.
-* `Movie`, `Actor`, `Role`: (IMDb domain) A movie has many actors and an actor has many movies; roles belongs to movie and to actor.
-* `Pizza`, `Topping`, `PizzaTopping`: (Domino's domain) A pizza has many toppings and an topping has many pizzas; pizza_toppings belongs to pizza and to topping.
-
-Whiteboard out your ideas and think about what columns you'll want in the corresponding tables, including foreign keys.
-
-* What does your schema look like?
-* What do your relationships look like?
-* Where are foreign keys stored in a many-to-many relationship?
-* etc.
-
-Your **second goal** should be to decide on your [user stories](https://en.wikipedia.org/wiki/User_story). You **must have a minimum of four user stories corresponding to the four CRUD actions** to help explain how a user will interact with your app. A user story should follow the general structure of `"As a <role>, I want <goal/desire> so that <benefit>."`.
-
-For example, if we were creating an app to review restaurants on Yelp, we might write:
-
-* As a user, I want to enter a location and be given a random nearby restaurant suggestion. (**Read**)
-* As a user, I want to be able to write a review for a restaurant. (**Create**)
-* As a user, I want to enter a restaurant and be given user reviews of that restaurant. (**Read**)
-* As a user, I should be able to edit my restaurant review. (**Update**)
-* As a user, I want to be able to delete one of my restaurant reviews. (**Delete**)
+1. First, fork it to your directory.
+2. second, clone the repository
+3. Git clone to your terminal
+4. open
+5. Enjoy!
 
 
+## How to run this app:
+ ruby  bin/run.rb
+
+## How to use this app:
+   1. This app will ask you to input your username and password. Please don't leave these fields blank.
+   2. Then you will be asked how are you feeling. Pick from the three choices.
+   3. You will be given a message and a quote.
+   4. You will then have the option to pick a different feeling, see all your quotes so far, track your mood and change your
+        user name.
+   5. You can exit the app at any time from options menu.
+
+What your program looks like (screenshots).
+etc.
 #### The Pitch
 
 Projects need to be approved prior to launching into them, so take some time to brainstorm project options that will fulfill the requirements above. When you are ready to pitch, be sure to bring the following with you when you sit down with your instructor(s):
@@ -362,36 +354,3 @@ A basic CRUD app is good, but we can do better. Let's tackle other user stories.
 * Allow a user to open a webpage for a restaurant they want to visit.
 * More interesting types of queries! Maybe some that aggregate and analyze data so users can dig deeper.
 * Use a `gem` to jazz up the look of our app with [ASCII text](https://github.com/miketierney/artii) or [colors](https://rubygems.org/gems/colorize/versions/0.8.1).
-
-#### Robustness
-
-While it's nice that we can use our app while following the [happy path](https://en.wikipedia.org/wiki/Happy_path), users aren't always so nice. Another opportunity for improvement would be to handle bad input or errors in a user friendly manner.
-
-Find a way for your app to not break if a user inputs unexpected data. For example a restaurant name in ALL CAPS, or if their cat walks over the keyboard and enters "sfudihdsuifhsidu."
-
-Can you think of any other scenarios? How would you gracefully handle such scenarios?
-
----
-
-### Phase 6: Presentation
-
-It's time to show off your creation to the world! Things you might want to do are:
-
-* Write a README detailing:
-  * How to install your application.
-  * How to run your application.
-  * How to use your application (commands that can be run).
-  * What your program looks like (screenshots).
-  * etc.
-* Prepare a demo video describing how a user would interact with your working project.
-    * The video should:
-      * Have an overview of your project. (2 minutes max)
-* Prepare a presentation to follow your video. (3 minutes max)
-    * Your presentation should:
-      * Describe something you struggled to build, and show us how you ultimately implemented it in your code.
-      * Discuss 3 things you learned in the process of working on this project.
-      * Address, if anything, what you would change or add to what you have today?
-      * Present any code you would like to highlight.
-* Write a blog post about the project and process.
-
-🎊 Good job on making to the end! 🎊

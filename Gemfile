@@ -6,3 +6,8 @@ gem "sqlite3"
 gem "pry"
 gem "require_all"
 gem "faker"
+gem "rake"
+gem 'tty-prompt'
+gem 'tty-font'
+gem 'audite'
+gem "table_print"

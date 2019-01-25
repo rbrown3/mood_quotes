@@ -1,3 +1,6 @@
 require_relative '../config/environment'
+# ActiveRecord::Base.logger.level = 1
+#require_relative "../lib/Ambient-background-music-floating.mp3"
 
-puts "hello world"
+#require 'audite'
+start_program

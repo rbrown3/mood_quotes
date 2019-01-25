@@ -1,0 +1,37 @@
+10.times do
+User.create(name:Faker::Name.name)
+end
+
+Quote.destroy_all
+
+
+sad_quote1 = Quote.create(mood:"sad",content:"We delight in the beauty of the butterfly, but rarely admit the changes it has gone through to achieve that beauty.", author:"Maya Angelou")
+sad_quote2 = Quote.create(mood:"sad",content:"If you prioritize yourself, you are going to save yourself." , author: "Gabrielle Union")
+sad_quote3 = Quote.create(mood:"sad",content:"You can't focus on the bad thing, you have to focus on getting through it." , author: "Ciara")
+sad_quote4 = Quote.create(mood:"sad",content:"It takes a lot to start over but you owe yourself a chance to succeed." , author: "Alex Elle")
+sad_quote5 = Quote.create(mood:"sad",content:"Hold space for healing, make room for love." , author: "Alex Elle")
+sad_quote6 = Quote.create(mood:"sad", content: "Turn your wounds into wisdom.", author: "Oprah Winfrey")
+sad_quote7 = Quote.create(mood: "sad", content:"Mistakes are a fact of life. If you are willing to be wrong then you have earned the right to be right.", author: "Nikki Giovanni")
+sad_quote8 = Quote.create(mood: "sad", content:"Don't wait for someone to bring you flowers. Plant your own garden and decorate your own soul.", author: "Nikki Giovanni")
+sad_quote9 = Quote.create(mood: "sad", content:"Do not believe the things you tell yourself when you are sad and alone.", author: "unknown")
+sad_quote10 = Quote.create(mood: "sad", content:"Mistakes are a fact of life. If you are willing to be wrong then you have eaarned the right to be right.", author: "Nikki Giovanni")
+happy_quote1 = Quote.create(mood:"happy",content:"It is so liberating to really know what I want, what truly makes me happy, what I will not tolerate. I have learned that it is no one else's job to take care of me but me." , author: "Beyonce Knowles")
+happy_quote2 = Quote.create(mood:"happy",content: "I am my own muse. The subject I know best. The subject I want to better." , author: "Frida Kahlo")
+happy_quote3 = Quote.create(mood:"happy",content: "I've worked too hard and have come to far to be stopped in my tracks." , author: "Alex Elle")
+happy_quote4 = Quote.create(mood: "happy", content: "Wake up and go after what you want! Your dreams are in your reach.", author: "Alex Elle")
+happy_quote5 = Quote.create(mood: "happy", content:"Know what sparks the light in you. Then use that light to illuminate the world.", author: "Oprah Winfrey")
+happy_quote6 = Quote.create(mood: "happy", content:"A champion is defined not by their wins but by how they can recover when they fall.", author: "Serena Williams")
+happy_quote7 = Quote.create(mood:"happy", content: "If I cannot do great things, I can do small things in a great way.", author: "Martin Luther King Jr.")
+happy_quote8 = Quote.create(mood:"happy", content: "It is the gymnasium of life where you get the workout, the resistance, and you find out things about yourself that you didn't know.", author: "Bishop T.D. Jakes")
+happy_quote9 = Quote.create(mood:"happy",content:"A problem is a chance for you to do your best.",author: "Duke Ellington" )
+happy_quote10 = Quote.create(mood:"happy",content:"If we could see the miracle of a single flower clearly, our whole life would change.",author: "The Buddha." )
+anxiety_quote1 = Quote.create(mood:"anxious", content: "Don't settle for average. Bring your best to the moment. Then, whether it fails or succeeds, at least you know you gave all you had. We need to live the best that is in us.", author: "Angela Bassett")
+anxiety_quote2 = Quote.create(mood:"anxious", content: "Believing in your talents, your abilities and your self worth can empower you to walk down an even brighter path.", author: "Soledad O'Brien")
+anxiety_quote3 = Quote.create(mood:"anxious", content: "What I know for sure is that speaking your truth is the most powerful tool we all have.", author: "Oprah Winfrey")
+anxiety_quote4 = Quote.create(mood:"anxious", content: "If you look confident you can pull anything- even if you have no clue what you are doing", author: "Jessica Alba")
+anxiety_quote5 = Quote.create(mood:"anxious", content: "Your crown has been bought and paid for. All you must do is put it on.", author: "James Baldwin")
+anxiety_quote6 = Quote.create(mood:"anxious", content: "Saying no can set the tone for self-preservation", author: "Alex Elle")
+anxiety_quote7 = Quote.create(mood:"anxious", content: "Forgive yourself for believing you are anything less than beautiful.", author: "Iyanla Vanzant")
+anxiety_quote8 = Quote.create(mood:"anxious", content: "You may not control all the events that happen to you, but you can decide not to be reduced by them.", author: "Maya Angelou")
+anxiety_quote9 = Quote.create(mood:"anxious", content: "Be a warrior, not a worrier.", author: "unknown")
+anxiety_quote10 = Quote.create(mood:"anxious", content: "All human beings make mistakes. We make choices and judgments that have... nothing to do with the truth of who we are.", author: "Iyanla Vanzant")
